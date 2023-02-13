@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="bp" prefHeight="1080.0" prefWidth="1790.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <TableView id="ClaimsTable" fx:id="ClaimsTable" prefHeight="905.0" prefWidth="1790.0" stylesheets="@utilisateur.css" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="id" maxWidth="192.99996948242188" prefWidth="122.0" style="-fx-alignment: center;" text="Id" />
+            <TableColumn fx:id="nom" maxWidth="349.00006103515625" prefWidth="207.0" style="-fx-alignment: center;" text="First name" />
+            <TableColumn fx:id="prenom" maxWidth="354.9999694824219" prefWidth="207.0" style="-fx-alignment: center;" text="LastName" />
+            <TableColumn fx:id="type" maxWidth="446.0000305175781" prefWidth="155.0" style="-fx-alignment: center;" text="Type" />
+            <TableColumn fx:id="titre" maxWidth="452.9999694824219" prefWidth="186.0" style="-fx-alignment: center;" text="Title" />
+            <TableColumn fx:id="date" prefWidth="162.0" text="Date" />
+            <TableColumn fx:id="desc" prefWidth="299.0" text="Description" />
+            <TableColumn fx:id="answer" prefWidth="211.0" text="Answer" />
+            <TableColumn fx:id="status" prefWidth="121.0" text="Status" />
+            <TableColumn fx:id="actions" prefWidth="120.0" text="Actions" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-header" />
+            <String fx:value="table-row" />
+         </styleClass>
+      </TableView>
+   </bottom>
+</BorderPane>

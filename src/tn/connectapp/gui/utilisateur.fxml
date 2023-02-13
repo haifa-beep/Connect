@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1790.0" style="-fx-background-color: #FFFAFA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.connectapp.gui.UtilisateurController">
+    <stylesheets>
+        <URL value="@utilisateur.css" />
+    </stylesheets>
+    <children>
+      <BorderPane fx:id="bp" layoutX="1.0" layoutY="-1.0" prefHeight="1080.0" prefWidth="1790.0">
+         <bottom>
+            <TableView id="ClaimsTable" fx:id="ClaimsTable" prefHeight="905.0" prefWidth="1790.0" stylesheets="@utilisateur.css" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="id" maxWidth="192.99996948242188" prefWidth="122.0" style="-fx-alignment: center;" text="Id" />
+                <TableColumn fx:id="nom" maxWidth="349.00006103515625" prefWidth="207.0" style="-fx-alignment: center;" text="First name" />
+                  <TableColumn fx:id="prenom" maxWidth="354.9999694824219" prefWidth="207.0" style="-fx-alignment: center;" text="LastName" />
+                  <TableColumn fx:id="type" maxWidth="446.0000305175781" prefWidth="155.0" style="-fx-alignment: center;" text="Type" />
+                  <TableColumn fx:id="titre" maxWidth="452.9999694824219" prefWidth="186.0" style="-fx-alignment: center;" text="Title" />
+                  <TableColumn fx:id="date" prefWidth="162.0" text="Date" />
+                  <TableColumn fx:id="desc" prefWidth="299.0" text="Description" />
+                  <TableColumn fx:id="answer" prefWidth="211.0" text="Answer" />
+                  <TableColumn fx:id="status" prefWidth="121.0" text="Status" />
+                  <TableColumn fx:id="actions" prefWidth="120.0" text="Actions" />
+              </columns>
+               <styleClass>
+                  <String fx:value="table-header" />
+                  <String fx:value="table-row" />
+               </styleClass>
+            </TableView>
+         </bottom>
+      </BorderPane>
+      <HBox layoutY="46.0" prefHeight="45.0" prefWidth="200.0">
+         <children>
+            <Text fill="#6f696980" strokeType="OUTSIDE" strokeWidth="0.0" text="Claims List">
+               <font>
+                  <Font name="Roboto Medium" size="26.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox layoutX="581.0" layoutY="69.0" prefHeight="45.0" prefWidth="101.0">
+         <children>
+            <Text fill="#6e686880" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="85.04443359375">
+               <font>
+                  <Font name="Roboto Medium" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </HBox.margin>
+            </Text>
+         </children></HBox>
+      <HBox layoutX="691.0" layoutY="69.0" prefHeight="45.0" prefWidth="278.0">
+         <children>
+            <JFXTextField fx:id="filtredfield" prefHeight="26.0" prefWidth="259.0" unFocusColor="#6f6969" />
+            <FontAwesomeIconView fill="#00000014" glyphName="SEARCH" size="20" wrappingWidth="15.666666507720947">
+               <HBox.margin>
+                  <Insets bottom="20.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <Pane layoutX="1634.0" layoutY="98.0" prefHeight="35.0" prefWidth="144.0">
+         <children>
+            <Button id="button" fx:id="button" layoutX="18.0" mnemonicParsing="false" onAction="#getAddView" prefHeight="33.0" prefWidth="108.0" style="-fx-text-fill: white;" styleClass="boutton" stylesheets="@utilisateur.css" text="Add" />
+         </children></Pane>
+      <Pane layoutX="1647.0" layoutY="-2.0" prefHeight="58.0" prefWidth="144.0" AnchorPane.bottomAnchor="1024.0" AnchorPane.leftAnchor="1647.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <FontAwesomeIconView fill="#302f2f99" glyphName="REFRESH" layoutX="92.0" layoutY="39.0" onMouseClicked="#refreshTable" size="25" text="" wrappingWidth="25.71427822113037" />
+         </children>
+      </Pane>
+      <Pane layoutY="122.0" prefHeight="67.0" prefWidth="1512.0">
+         <children>
+            <JFXButton fx:id="opinion" layoutX="381.0" layoutY="13.0" onAction="#home" prefHeight="35.0" prefWidth="200.0" style="-fx-border-color: #660099; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: #FFFAFA;" styleClass="d" stylesheets="@utilisateur.css" text="Claims">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="opinion1" layoutX="1077.0" layoutY="13.0" onAction="#archive" prefHeight="35.0" prefWidth="200.0" style="-fx-border-color: #660099; -fx-border-width: 0px 0px 3px 0px; -fx-background-color: #FFFAFA;" styleClass="d" stylesheets="@utilisateur.css" text="Archive">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+    </children>
+    
+</AnchorPane>
